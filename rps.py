@@ -5,6 +5,9 @@ name=input("Enter your name: ")
 choice='yes'
 while choice.lower()=='yes':
     user_choice=(input("Enter rock paper or scissors: ")).lower()
+
+    if user_choice not in ['rock','paper','scissors']:
+        continue
     comp_ran=random.choice(comp_inputs)
     comp_choice=inputs.get(comp_ran)
     print("%s selected: "%name)
